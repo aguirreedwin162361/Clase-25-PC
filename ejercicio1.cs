@@ -34,18 +34,33 @@ do
     Console.WriteLine("3.Buscar usuario por nombre");
     Console.WriteLine("4.Salir");
 
+     Console.Write("Seleccione una opcion: ");
+     opcion = int.Parse(Console.ReadLine());
+
     switch (opcion)
     {
         case 1:
         Console.Write("Ingrese su nombre: ");
         nombre = Console.ReadLine();
+        if (nombre.Length < 3)
+        {
+            Console.WriteLine("Error");
+        }
         Console.Write("Ingrese su edad: ");
         edad = int.Parse(Console.ReadLine());
+        if (edad<18)
+        {
+            Console.WriteLine("Menor de edad");
+        }
         Console.Write("Ingrese su correo: ");
         correo = Console.ReadLine();
-        Console.Write("Ingrese tipo de usuario (administrador, cliente, invitado)");
+        if (!correo.Contains("@"))
+        {
+            Console.WriteLine("Advertencia, su correo no posee: @");
+        }
+        Console.Write("Ingrese tipo de usuario (administrador, cliente, invitado): ");
         tipoUsuario = Console.ReadLine();
-
+         break;
     }
 } while (opcion != 4);
 
