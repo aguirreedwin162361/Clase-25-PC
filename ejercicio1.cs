@@ -33,4 +33,19 @@ do
     Console.WriteLine("2.Mostrar usuarios registrados");
     Console.WriteLine("3.Buscar usuario por nombre");
     Console.WriteLine("4.Salir");
+
+    switch (opcion)
+    {
+        case 1:
+        Console.Write("Ingrese su nombre: ");
+        nombre = Console.ReadLine();
+        Console.Write("Ingrese su edad: ");
+        edad = int.Parse(Console.ReadLine());
+        Console.Write("Ingrese su correo: ");
+        correo = Console.ReadLine();
+        Console.Write("Ingrese tipo de usuario (administrador, cliente, invitado)");
+        tipoUsuario = Console.ReadLine();
+
+    }
 } while (opcion != 4);
+
