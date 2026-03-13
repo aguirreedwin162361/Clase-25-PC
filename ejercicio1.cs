@@ -24,3 +24,13 @@ string nombre = "";
 int edad;
 string correo = "";
 string tipoUsuario= "";
+int opcion;
+
+do
+{
+    Console.WriteLine("MENU");
+    Console.WriteLine("1.Registrar Usuario");
+    Console.WriteLine("2.Mostrar usuarios registrados");
+    Console.WriteLine("3.Buscar usuario por nombre");
+    Console.WriteLine("4.Salir");
+} while (opcion != 4);
